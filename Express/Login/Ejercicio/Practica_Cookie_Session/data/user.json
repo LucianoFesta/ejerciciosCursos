@@ -1,0 +1,22 @@
+[
+ {
+  "nombre": "Luciano",
+  "color": "#ff5252",
+  "email": "lucianoefesta@hotmail.com",
+  "edad": "",
+  "recordarColor": "on"
+ },
+ {
+  "nombre": "Lucas",
+  "color": "#8bb738",
+  "email": "lucianoratatafesta@gmail.com",
+  "edad": ""
+ },
+ {
+  "nombre": "MARCELA MIRTA",
+  "color": "#94dcf4",
+  "email": "lucianoratatafesta@gmail.com",
+  "edad": "45",
+  "olvidarColor": "on"
+ }
+]

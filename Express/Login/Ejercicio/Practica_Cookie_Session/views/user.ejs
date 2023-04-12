@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<% if(usuario) { %>
+
+    <body bgcolor="<%= usuario.color %>">
+        <h1>Bienvenido <%= usuario.nombre %>!!!</h1>
+        <p> Hola <%= usuario.nombre %>, elegiste el color: <%= usuario.color %>, tu mail es: <%= usuario.email %> y tu
+                        edad es <%= usuario.edad %> años.
+        </p>
+    </body>
+    
+<% }else { %>
+
+        <body bgcolor="<%= usuarioCookie.color %>">
+            <h1>Bienvenido <%= usuarioCookie.nombre %>!!!</h1>
+            <p> Hola <%= usuarioCookie.nombre %>, elegiste el color: <%= usuarioCookie.color %>, tu mail es: <%= usuarioCookie.email %> y tu
+                            edad es <%= usuarioCookie.edad %> años.
+            </p>
+        </body>
+    <% } %>
+
+</html>

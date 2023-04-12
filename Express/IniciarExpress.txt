@@ -1,0 +1,73 @@
+/********************************************************************************************************************************************************************/
+/******************************************************************* CREACIÓN SERVIDOR EXPRESS **********************************************************************/
+/********************************************************************************************************************************************************************/
+
+
+Al iniciar un proyecto nuevo, instalamos NODE (npm init -y) e instalamos EXPRESS (npm install express -save) para tener nuestro proyecto listo para generar el servidor 
+básico.
+
+- En nuestro package.json colocamos en el mail: app.js una vez que creamos el archivo app.js.
+
+- Requerimos express --> const express = require('express');
+
+- Ejecutamos el modulo express --> const app = express();
+
+- Hacemos un app.listen para que el servidor escuche. Para ello creamos el archivo .env para crear el PORT. y tener una variable de entorno.
+Para ello creamos la variable de entorno y tenemos que instalarlo --> npm i dotenv.
+Luego lo requerimos --> const dotenv = require('dotenv').config();
+
+- Configuramos el package.json para actualizar el servidor desde script. En lugar de escribir npx nodemon app, configuramos el script.
+
+Borramos el "test" y configuramos el "start": node app que lo vamos a utilizar cuando esta en producción y "dev": npx nodemon app para desarrollo.
+*Si estamos en producción inicializamos con: npm start y veremos que se ejecuta node app.
+*Si estamos en desarrollo en nuestra pc, inicializamos con npm run dev y veremos que se ejecuta npx nodemon app.
+
+- Creamos la carpeta "routes", utilizado para manejar las rutas de una manera mas prolija y modularizada. Un archivo routes.js por cada recurso (ej: productsRoutes.js).
+
+En dicha carpeta requerimos express. 
+Creamos un Router --> const router = express.Router();
+Exportamos el router.
+Colocamos todas las rutas del recurso en dicho archivo y lo requerimos en app.js. --> const productsRouter = require('./routes/productsRoutes');
+
+- Una vez creado el Routes, tenemos que crear los controladores, donde van todas las funcines de las rutas. Para ellos creamos la carpeta controllers.
+Allí creamos una variable con todas las funciones de cada ruta. y exportamos la misma para requerirla en productRoutes, por ej.
+En productsRoutes reemplazamos las rutas por la variable importada y sus objetos. --> router.get('/', productsControllers.sendAll);
+
+
+
+
+- -Npm init
+-Instalamos dependencias(express, dotenv, etc)
+-Creamos app.js(entry point)
+-Requerimos express
+-Inicializamos express
+-Seteamos el puerto con app.listen
+-Creamos el archivo .env
+-Crear carpeta routes
+-Crear archivo router
+-Requerir router en app
+-Utilizarlo con app.use
+-Creamos los scripts en package.json
+-Crear carpeta controllers
+-Crear archivo controller
+-Requerir módulo path
+-Importar controller en router
+-Utilizar el controlador como segundo parámetro.
+-Crear carpeta views
+-Crear el archivo de vista
+-Volver al controller y crear la función que envía el archivo de vista.
+-Instalar ejs
+-Setear ejs como motor de vistas en el entry point
+	app.set(‘view engine’, ‘ejs’);
+-Si la vista estaba creada en html, convertir el archivo a ejs.
+-En controller utilizar res.render(‘nombreVista’)
+-Además, podemos pasarle un objeto como segundo parámetro.
+-Utilizar los datos del objeto en el archivo ejs correspondiente.(Utilizar etiquetas específicas de ejs)
+	<%= %> para imprimir un dato
+	<% %> para una operación lógica
+-Instalar extensión EJS language support.
+
+
+
+
+

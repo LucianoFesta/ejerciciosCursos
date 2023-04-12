@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Ignacio",
+        "apellidos": ["García","Ferrer"],
+        "dni": "35353535"
+    },
+    {
+        "nombre": "Lucho",
+        "apellidos": "Festa",
+        "dni": "36365939"
+    },
+    {
+        "nombre": "Lucas",
+        "apellidos": "Viano",
+        "dni": "37491218"
+    }
+]
